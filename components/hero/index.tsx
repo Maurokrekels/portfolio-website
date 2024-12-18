@@ -23,7 +23,7 @@ export default function Hero() {
                         className="lg:pr-8"
                     >
                         <h1 className="text-5xl font-extrabold tracking-tight sm:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                            Software Development{' '}
+                            Software Developer{' '}
                             <span className="text-2xl font-normal text-muted-foreground">
                                 (Student)
                             </span>
