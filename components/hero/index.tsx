@@ -10,7 +10,7 @@ import { Button } from '../ui/button';
 
 export default function Hero() {
     return (
-        <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="snap-start relative min-h-screen flex items-center justify-center overflow-hidden">
             <BackgroundAnimation />
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 z-0" />
 

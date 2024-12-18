@@ -6,12 +6,15 @@ import { Poppins } from "next/font/google"
 import "../styles/globals.css";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import LoadingScreen from "@/components/loading-screen";
+// import LoadingScreen from "@/components/loading-screen";
 import Footer from "@/components/footer";
+import { cn } from "@/lib/utils";
 
 const metadata: Metadata = {
     title: "Mauro Krekels - Portfolio",
     description: "Mauro Krekels - Portfolio",
+    keywords: ["Mauro", "Krekels", "Software Developer", "Portfolio"],
+    authors: [{ name: "Mauro Krekels" }],
 };
 
 const poppins = Poppins({
@@ -38,7 +41,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <head />
-            <body className={poppins.className}>
+            <body className={cn(poppins.className, "overflow-y-scroll no-scrollbar")}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
@@ -46,14 +49,14 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     <AnimatePresence mode="wait">
-                        {isLoading ? (
+                        {/* {isLoading ? (
                             <LoadingScreen key="loading" />
-                        ) : (
+                        ) : ( */}
                             <>
                                 {children}
                                 <Footer />
                             </>
-                        )}
+                        {/* )} */}
                     </AnimatePresence>
                 </ThemeProvider>
             </body>
