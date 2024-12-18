@@ -7,6 +7,7 @@ import "../styles/globals.css";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import LoadingScreen from "@/components/loading-screen";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const metadata: Metadata = {
     title: "Mauro Krekels - Portfolio",
@@ -50,6 +51,7 @@ export default function RootLayout({
                         ) : (
                             children
                         )}
+                        <SpeedInsights />
                     </AnimatePresence>
                 </ThemeProvider>
             </body>
