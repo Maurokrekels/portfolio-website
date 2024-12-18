@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 // import LoadingScreen from "@/components/loading-screen";
 import Footer from "@/components/footer";
 import { cn } from "@/lib/utils";
+import Navigation from "@/components/navigation";
 
 const metadata: Metadata = {
     title: "Mauro Krekels - Portfolio",
@@ -46,13 +47,13 @@ export default function RootLayout({
                     attribute="class"
                     defaultTheme="dark"
                     enableSystem
-                    disableTransitionOnChange
                 >
                     <AnimatePresence mode="wait">
                         {/* {isLoading ? (
                             <LoadingScreen key="loading" />
                         ) : ( */}
                             <>
+                                <Navigation />
                                 {children}
                                 <Footer />
                             </>
