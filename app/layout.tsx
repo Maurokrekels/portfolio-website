@@ -53,7 +53,7 @@ export default function RootLayout({
                             <LoadingScreen key="loading" />
                         ) : ( */}
                             <>
-                                <Navigation />
+                                {/* <Navigation /> */}
                                 {children}
                                 <Footer />
                             </>
