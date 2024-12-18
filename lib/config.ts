@@ -15,7 +15,7 @@ export const config: Config = {
         },
         {
             title: 'Portfolio',
-            description: 'Aurum Scripts is a company that sells resources for the popular game FiveM.',
+            description: 'My personal portfolio website.',
             link: 'https://maurokrekels.vercel.app',
             technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
             image: '/portfolio.png',
