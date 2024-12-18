@@ -12,6 +12,17 @@ export const config: Config = {
             completed: false,
             startDate: '2024-14-12',
             endDate: '',
-        }
+        },
+        {
+            title: 'Portfolio',
+            description: 'Aurum Scripts is a company that sells resources for the popular game FiveM.',
+            link: 'https://maurokrekels.vercel.app',
+            technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
+            image: '/portfolio.png',
+            github: 'https://github.com/MauroKrekels/portfolio-website',
+            completed: false,
+            startDate: '2024-18-12',
+            endDate: '',
+        },
     ]
 }
