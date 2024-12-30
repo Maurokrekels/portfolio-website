@@ -4,7 +4,7 @@ export interface Project {
     link: string;
     technologies: string[];
     image: string;
-    github: string;
+    github: string | false;
     completed: boolean;
     startDate: string;
     endDate?: string;

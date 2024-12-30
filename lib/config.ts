@@ -24,6 +24,17 @@ const projects: Project[] = [
         startDate: '2024-18-12',
         endDate: '',
     },
+    {
+        title: 'Amersfoort Roleplay',
+        description: 'Amersfoort Roleplay is a Dutch FiveM roleplay server.',
+        link: 'https://afrp.nl',
+        technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
+        image: '/amersfoort.png',
+        github: false,
+        completed: false,
+        startDate: '2024-29-12',
+        endDate: '',
+    },
 ];
 
 const githubUsername = "MauroKrekels";

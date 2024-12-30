@@ -6,18 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Calendar, Globe, Clock } from 'lucide-react';
 import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa';
-
-interface ProjectProps {
-    title: string;
-    description: string;
-    link: string;
-    technologies: string[];
-    image: string;
-    github: string;
-    completed: boolean;
-    startDate: string;
-    endDate?: string;
-}
+import { Project as ProjectProps } from "@/types";
 
 const Project: React.FC<ProjectProps> = ({
     title,
@@ -53,10 +42,12 @@ const Project: React.FC<ProjectProps> = ({
                 </div>
             </CardContent>
             <CardFooter className="flex justify-between">
-                <Button variant="outline" onClick={() => window.open(github, '_blank')}>
-                    <FaGithub className="w-4 h-4 mr-2" />
-                    GitHub
-                </Button>
+                {github && (
+                    <Button variant="outline" onClick={() => window.open(github, '_blank')}>
+                        <FaGithub className="w-4 h-4 mr-2" />
+                        GitHub
+                    </Button>
+                )}
                 <Button onClick={() => window.open(link, '_blank')} className='text-white'>
                     <Globe className="w-4 h-4 mr-2" />
                     Visit Project
