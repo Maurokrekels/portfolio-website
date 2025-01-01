@@ -9,7 +9,7 @@ import { AnimatePresence } from "framer-motion";
 // import LoadingScreen from "@/components/loading-screen";
 import Footer from "@/components/footer";
 import { cn } from "@/lib/utils";
-import Navigation from "@/components/navigation";
+// import Navigation from "@/components/navigation";
 
 const metadata: Metadata = {
     title: "Mauro Krekels - Portfolio",
@@ -29,15 +29,15 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const [isLoading, setIsLoading] = useState(true);
+    // const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 2000);
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         setIsLoading(false);
+    //     }, 2000);
 
-        return () => clearTimeout(timer);
-    }, []);
+    //     return () => clearTimeout(timer);
+    // }, []);
 
     return (
         <html lang="en" suppressHydrationWarning>
