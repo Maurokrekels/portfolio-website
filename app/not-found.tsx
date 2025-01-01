@@ -12,7 +12,7 @@ export default function NotFound() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <h1 className="text-9xl font-bold mb-4 text-primary">404</h1>
+                <h1 className="text-9xl font-bold mb-4 text-primary animate-pulse">404</h1>
                 <h2 className="text-2xl font-semibold mb-4">Pagina niet gevonden</h2>
                 <p className="text-muted-foreground mb-8">
                     De pagina die je zoekt bestaat niet of is verplaatst.
