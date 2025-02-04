@@ -1,15 +1,15 @@
-"use client";
-import { useEffect, useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { SiGithub } from "react-icons/si";
-import { FaCode, FaServer, FaLaptopCode, FaDatabase } from "react-icons/fa";
-import { fetchGithubUser } from "@/lib/github";
-import { githubUsername, skills } from "@/lib/config";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { GithubUser } from "@/types";
+"use client"
+import { useEffect, useState } from "react"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { SiGithub } from "react-icons/si"
+import { FaCode, FaServer, FaLaptopCode, FaDatabase } from "react-icons/fa"
+import { fetchGithubUser } from "@/lib/github"
+import { githubUsername, skills } from "@/lib/config"
+import Link from "next/link"
+import { motion } from "framer-motion"
+import type { GithubUser } from "@/types"
 
 export default function Skills() {
     const [user, setUser] = useState<GithubUser>({
@@ -19,18 +19,18 @@ export default function Skills() {
         followers: 0,
         following: 0,
         public_repos: 0,
-    });
+    })
 
     useEffect(() => {
         const fetchData = async () => {
-            const userData = await fetchGithubUser();
-            setUser(userData);
-        };
-        fetchData();
-    }, []);
+            const userData = await fetchGithubUser()
+            setUser(userData)
+        }
+        fetchData()
+    }, [])
 
     return (
-        <section id="about" className="snap-start min-h-screen py-20 bg-gradient-to-b from-background to-secondary/20">
+        <section id="skills" className="py-20 bg-gradient-to-b from-secondary/10 to-background">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export default function Skills() {
                 >
                     <h2 className="text-5xl font-bold text-center mb-4 text-primary">Skills & Experience</h2>
                     <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                        I specialize in full-stack development with a focus on creating responsive and user-friendly applications.
+                        Specializing in full-stack development with a focus on creating responsive and user-friendly applications.
                     </p>
                 </motion.div>
 
@@ -150,6 +150,6 @@ export default function Skills() {
                 </div>
             </div>
         </section>
-    );
+    )
 }
 

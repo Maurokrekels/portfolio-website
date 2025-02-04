@@ -20,9 +20,9 @@ const projects: Project[] = [
         technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
         image: '/amersfoort.png',
         github: false,
-        completed: false,
+        completed: true,
         startDate: '2024-29-12',
-        endDate: '',
+        endDate: '2025-10-01',
     },
     {
         title: 'FiveM Meos',
